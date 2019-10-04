@@ -39,14 +39,14 @@ function k8s_delete() {
     kubectl delete -f $k8s_config_dir/copy-artifacts.yaml
     kubectl delete -f $k8s_config_dir/create-volumes.yaml
     kubectl delete -f $k8s_config_dir/nfs-server.yaml
-    kubectl delete -f $k8s_config_dir/docker.yaml
-    kubectl delete -f $k8s_config_dir/docker-volume.yaml
+    ## kubectl delete -f $k8s_config_dir/docker.yaml
+    ## kubectl delete -f $k8s_config_dir/docker-volume.yaml
     kubectl delete -f $k8s_config_dir/nfs-server.yaml
 }
 
 function k8s_all() {
     k8s_nfs
-    k8s_docker
+    ## k8s_docker
     k8s_volume
     k8s_artifacts
 }
